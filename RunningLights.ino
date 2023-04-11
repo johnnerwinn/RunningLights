@@ -16,27 +16,9 @@ void setup() {
   // Set the LED pins as outputs
 
   Serial.begin(9600);
-
-  // for (int i = 0; i < 8; i++) {
-
-  //   pinMode(ledPins[i], OUTPUT);
-
-  // }
-
   ledArray.initialize();
 }
 
-
-
-void displayFrame(int* frame) {
-
-  for (int i = 0; i < 8; i++) {
-
-    digitalWrite(ledPins[i], frame[i]);
-
-  }
-
-}
 
 void transition() {
   while (true) {
@@ -92,9 +74,6 @@ void loop() {
     transition();
     playAnimation(currentAnimation);
   }
-
-  
-  
 
 }
 
