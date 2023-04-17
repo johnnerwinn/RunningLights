@@ -67,13 +67,8 @@ void playAnimation(int animationIndex) {
 void loop() {
   currentAnimation = readSwitches();
 
-  if (currentAnimation == 0) {
-    ledArray.turnOff();
-  } else {
-
-    transition();
-    playAnimation(currentAnimation);
-  }
+  transition();
+  playAnimation(currentAnimation);
 
 }
 
